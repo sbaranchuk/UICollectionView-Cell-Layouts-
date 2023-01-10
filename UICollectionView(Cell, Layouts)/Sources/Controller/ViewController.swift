@@ -56,5 +56,12 @@ class FlowLayoutExampleViewController: UIViewController {
 
 extension FlowLayoutExampleViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(
+            width: (view.frame.size.width / 6),
+            height: (view.frame.size.width / 6)
+        )
+    }
+
 }
 
