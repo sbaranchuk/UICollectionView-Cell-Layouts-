@@ -47,8 +47,8 @@ class FlowLayoutExampleViewController: UIViewController {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        collectionView.register(FlowLayoutCell.self, forCellWithReuseIdentifier: FlowLayoutCell.identifier)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlowLayoutCell.identifier, for: indexPath)
+        collectionView.register(Cell.self, forCellWithReuseIdentifier: Cell.identifier)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.identifier, for: indexPath)
         return cell
     }
 
@@ -58,8 +58,8 @@ extension FlowLayoutExampleViewController: UICollectionViewDataSource, UICollect
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(
-            width: (view.frame.size.width / 6),
-            height: (view.frame.size.width / 6)
+            width: (view.frame.size.width / 2),
+            height: (view.frame.size.width / 2)
         )
     }
 
