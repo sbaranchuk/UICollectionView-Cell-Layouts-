@@ -25,7 +25,7 @@ class FlowLayoutExampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
-        title = "Simple Example"
+        title = "Books"
         setupHierarchy()
         setupLayout()
     }
@@ -42,19 +42,39 @@ class FlowLayoutExampleViewController: UIViewController {
         }
     }
 
+}
+
+extension FlowLayoutExampleViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(
+            width: 170,
+            height: 300
+        )
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         20
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        collectionView.register(FlowLayoutCell.self, forCellWithReuseIdentifier: FlowLayoutCell.identifier)
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlowLayoutCell.identifier, for: indexPath)
-        return cell
+        collectionView.register(Cell.self, forCellWithReuseIdentifier: Cell.identifier)
+        let item = collectionView.dequeueReusableCell(withReuseIdentifier: Cell.identifier, for: indexPath) as? Cell
+        item?.image.image = UIImage(named: Model.images[indexPath.row])
+        item?.percentLabel.text = String(Int.random(in: 0...100)) + "%"
+        return item ?? UICollectionViewCell()
     }
 
-}
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        10.0
+    }
 
-extension FlowLayoutExampleViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        10.0
+    }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 25.0, left: 5.0, bottom: 25.0, right: 5.0)
+    }
 }
 

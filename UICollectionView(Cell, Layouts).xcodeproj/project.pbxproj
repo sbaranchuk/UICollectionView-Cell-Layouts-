@@ -13,6 +13,8 @@
 		8402E8B8296D8E640039F1F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8402E8B7296D8E640039F1F3 /* Assets.xcassets */; };
 		8402E8C4296D91660039F1F3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8402E8C3296D91660039F1F3 /* SnapKit */; };
 		8402E8CD296DA6B60039F1F3 /* FlowLayoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402E8CC296DA6B60039F1F3 /* FlowLayoutCell.swift */; };
+		8402E8D0296DBF6D0039F1F3 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402E8CF296DBF6D0039F1F3 /* Cell.swift */; };
+		8402E8D3296DE9200039F1F3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402E8D2296DE9200039F1F3 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		8402E8B7296D8E640039F1F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8402E8BC296D8E640039F1F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8402E8CC296DA6B60039F1F3 /* FlowLayoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayoutCell.swift; sourceTree = "<group>"; };
+		8402E8CF296DBF6D0039F1F3 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		8402E8D2296DE9200039F1F3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		8402E8C6296DA2C50039F1F3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8402E8D1296DE9140039F1F3 /* Model */,
 				8402E8C7296DA2D70039F1F3 /* App */,
 				8402E8C8296DA2E10039F1F3 /* Controller */,
 				8402E8CE296DA6BE0039F1F3 /* Cells */,
@@ -102,8 +107,17 @@
 			isa = PBXGroup;
 			children = (
 				8402E8CC296DA6B60039F1F3 /* FlowLayoutCell.swift */,
+				8402E8CF296DBF6D0039F1F3 /* Cell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		8402E8D1296DE9140039F1F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8402E8D2296DE9200039F1F3 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +197,8 @@
 			files = (
 				8402E8B3296D8E620039F1F3 /* ViewController.swift in Sources */,
 				8402E8CD296DA6B60039F1F3 /* FlowLayoutCell.swift in Sources */,
+				8402E8D0296DBF6D0039F1F3 /* Cell.swift in Sources */,
+				8402E8D3296DE9200039F1F3 /* Model.swift in Sources */,
 				8402E8AF296D8E620039F1F3 /* AppDelegate.swift in Sources */,
 				8402E8B1296D8E620039F1F3 /* SceneDelegate.swift in Sources */,
 			);
