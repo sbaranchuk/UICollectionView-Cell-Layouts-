@@ -26,6 +26,7 @@ class FlowLayoutExampleViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
         title = "Books"
+        navigationController?.navigationBar.prefersLargeTitles = true
         setupHierarchy()
         setupLayout()
     }
@@ -74,7 +75,7 @@ extension FlowLayoutExampleViewController: UICollectionViewDataSource, UICollect
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        UIEdgeInsets(top: 25.0, left: 5.0, bottom: 25.0, right: 5.0)
+        UIEdgeInsets(top: 5.0, left: 10.0, bottom: 25.0, right: 10.0)
     }
 }
 
